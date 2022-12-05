@@ -25,7 +25,7 @@ internal class Program
     private static List<Game> GetGames()
     {
         using var streamReader = new StreamReader(new FileStream("input.txt", FileMode.Open, FileAccess.Read));
-        var allGames = new List<Game>();
+        var result = new List<Game>();
 
         while (!streamReader.EndOfStream)
         {
@@ -33,9 +33,9 @@ internal class Program
             var values = line.Split(' ');
             var enemyChoice = values[0][0];
             var ownChoice = values[1][0];
-            allGames.Add(new Game(enemyChoice, ownChoice));
+            result.Add(new Game(enemyChoice, ownChoice));
         }
-        return allGames;
+        return result;
     }
 }
 
