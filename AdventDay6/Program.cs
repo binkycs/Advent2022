@@ -4,14 +4,14 @@ internal class Program
 {
     private static void Main()
     {
-        string input = GetInput();
+        var input = GetInput();
         CommunicationChecker9001(input, 4);
         CommunicationChecker9001(input, 14);
     }
 
     private static string GetInput()
     {
-        return new StreamReader(new FileStream("input.txt", FileMode.Open, FileAccess.Read)).ReadToEnd();
+        return new StreamReader("input.txt").ReadToEnd();
     }
 
     private static void CommunicationChecker9001(string input, int uniqueCharacters)

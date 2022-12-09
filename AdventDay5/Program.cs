@@ -25,8 +25,7 @@ internal class Program
 
     private static string GetInputFile()
     {
-        using var streamReader = new StreamReader(new FileStream("input.txt", FileMode.Open, FileAccess.Read));
-        return streamReader.ReadToEnd();
+        return new StreamReader("input.txt").ReadToEnd();
     }
 
     private static List<CargoStack> GetStacks(string input)

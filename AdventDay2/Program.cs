@@ -24,7 +24,7 @@ internal class Program
 
     private static List<Game> GetGames()
     {
-        using var streamReader = new StreamReader(new FileStream("input.txt", FileMode.Open, FileAccess.Read));
+        using var streamReader = new StreamReader("input.txt");
         var result = new List<Game>();
 
         while (!streamReader.EndOfStream)

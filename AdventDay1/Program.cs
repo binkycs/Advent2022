@@ -24,7 +24,7 @@ class Program
 
     private static List<Reindeer> GetReindeers()
     {
-        using var streamReader = new StreamReader(new FileStream("input.txt", FileMode.Open, FileAccess.Read));
+        using var streamReader = new StreamReader("input.txt");
         var allReindeer = new List<Reindeer>();
         int count = 0, index = 1;
 
