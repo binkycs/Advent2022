@@ -2,7 +2,6 @@
 
 internal class Program
 {
-    
     private static readonly Dictionary<string, int> Directions = new()
     {
         {"U", -1},
@@ -10,7 +9,6 @@ internal class Program
         {"L", -1},
         {"R", 1}
     };
-
 
     private static void Main()
     {
